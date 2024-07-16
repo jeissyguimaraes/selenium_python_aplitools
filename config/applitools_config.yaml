@@ -1,0 +1,55 @@
+# Applitools server URL
+server_url: ""  
+
+# Applitools API key for authentication
+api_key: ""
+
+# Name of the application being tested
+app_name: ""
+
+# Configuration for web tests
+web:
+  # Forces full-page screenshot
+  force_full_page_screenshot: true  
+  # Wait before taking the screenshot (in milliseconds)
+  wait_before_screenshots: 100  
+  # Stitching mode for combining parts of the screen
+  stitch_mode: CSS  # Options: Scroll | CSS
+
+# Configuration for native mobile app tests
+mobile_native:
+  # Specifies if the test will be run on a simulator
+  is_simulator: false
+
+# Configuration for tests with Ultrafast Grid (UFG)
+web_ufg:
+  runner_options:
+    # Number of concurrent tests
+    test_concurrency: 6
+    # Disables browser fetching
+    disable_browser_fetching: false
+    # Enables cross-origin rendering
+    enable_cross_origin_rendering: false
+    # Do not use cookies
+    dont_use_cookies: false
+    # Enables layout breakpoints
+    layout_breakpoints: true
+  browsers:
+    desktop:
+      # Configuration for Edge Chromium browser on desktop
+      - browser_type: EDGE_CHROMIUM  # Names from BrowserType
+        width: 1920
+        height: 1083
+      # Configuration for Safari browser on desktop
+      - browser_type: SAFARI  # Names from BrowserType
+        width: 1200
+        height: 600
+    ios:
+      # Configuration for iPhone 13 Pro device emulation
+      - device_name: iPhone_13_Pro  # Names from IosDeviceName
+        screen_orientation: PORTRAIT  # Screen orientation: PORTRAIT | LANDSCAPE
+        ios_version: LATEST  # iOS version: LATEST | ONE_VERSION_BACK
+      # Configuration for iPhone 11 device emulation
+      - device_name: iPhone_11  # Names from IosDeviceName
+        screen_orientation: PORTRAIT  # Screen orientation: PORTRAIT | LANDSCAPE
+        ios_version: LATEST  # iOS version: LATEST | ONE_VERSION_BACK

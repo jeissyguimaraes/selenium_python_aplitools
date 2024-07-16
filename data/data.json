@@ -1,0 +1,8 @@
+{
+  "url": "https://www.saucedemo.com",
+  "username": "standard_user",
+  "password": "secret_sauce",
+  "app_name": "saucedemo.com",
+  "test_name": "Visual Test with Ignore Region",
+  "ignore_selector": ".inventory_item_img"
+}
