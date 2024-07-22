@@ -2,15 +2,11 @@ import sys
 import os
 import json
 
-# Adicione o diretório raiz do projeto ao sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from libraries.BrowserManager import BrowserManager
 from libraries.EyesLibrary import EyesLibrary
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 
-# Carregar dados de teste
 with open(os.path.join(os.path.dirname(__file__), '..', 'data', 'data.json'), 'r') as file:
     data = json.load(file)
 
